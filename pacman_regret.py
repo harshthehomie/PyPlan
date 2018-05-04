@@ -1,8 +1,16 @@
 import sys
-sys.path.append('../')
+# sys.path.append('/your/dir/to/tensorflow/models') # point to your tensorflow dir
+import importlib
+# from importlib import util
+# spec = importlib.util.spec_from_file_location("agents", "../agents")
+# foo = importlib.util.module_from_spec(spec)
+# spec.loader.exec_module(foo)
+# foo.MyClass()
 
-from agents import *
-from dealers import *#pacman_dealer
+sys.path.append("../")
+
+from PyPlan.agents import *
+from dealers import pacman_dealer
 
 """
 The UCB rollout agent attempts to minimize cumulative regret over its pull budget. Unlike uniform rollout, it doesn't 
