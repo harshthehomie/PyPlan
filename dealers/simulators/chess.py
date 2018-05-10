@@ -79,7 +79,7 @@ class ChessState(abstract_state.AbstractState):
 
             pygame.display.set_caption(self.env_name)
             if len(self.resources) == 0:
-                self.load_resources("..\\dealers\\simulators\\chesscode\\sprites")
+                self.load_resources("/home/darkice/AI/packages/PyPlan/dealers/simulators/chesscode/sprites")
             icon = pygame.transform.scale(self.resources['kwhite'], (32, 32))
             pygame.display.set_icon(icon)
 
