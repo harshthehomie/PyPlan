@@ -1,3 +1,8 @@
+import sys
+sys.path.append('../')
+sys.path.append('../dealers/simulators/pacmancode')
+
+
 from agents import *
 from agents.evaluations import *
 from dealers import *
