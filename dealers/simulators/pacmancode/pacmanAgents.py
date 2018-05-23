@@ -4,7 +4,7 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-# 
+#
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -40,7 +40,7 @@ class LeftTurnAgent(game.Agent):
             return Directions.LEFT[left]
         return Directions.STOP
 
-    def select_action(self, state):
+    def seleccct_action(self, state):
         """For use with pacman (simulator)."""
         legal = state.get_actions()
         current = state.current_state.data.agentStates[0].configuration.direction
@@ -81,7 +81,7 @@ class GreedyAgent(Agent):
         bestActions = [pair[1] for pair in scores if pair[0] == bestScore]
         return random.choice(bestActions)
 
-    def select_action(self, state):
+    def seleccct_action(self, state):
         """For use with pacman (simulator)."""
         # Generate candidate actions
         legal = state.get_actions()

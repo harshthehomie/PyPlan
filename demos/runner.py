@@ -1,4 +1,6 @@
 import sys
+import pdb
+pdb.set_trace()
 sys.path.append('../')
 sys.path.append('../dealers/simulators/pacmancode')
 
