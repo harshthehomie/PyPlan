@@ -24,7 +24,6 @@ class ChessState(abstract_state.AbstractState):
         self.game_outcome = None
 
     def clone(self):
-        pdb.set_trace()
         new_state = copy.copy(self)
         new_state.current_state = copy.copy(self.current_state)
         return new_state
@@ -36,7 +35,7 @@ class ChessState(abstract_state.AbstractState):
 
     def take_action(self, action):
         reward = self.current_state.move_piece(action)
-
+        pdb.set_trace()
         self.current_state.last_action, previous_player = action, self.current_player
         self.update_current_player()                # Can be found in abstract_state.py
 
@@ -54,6 +53,8 @@ class ChessState(abstract_state.AbstractState):
     def get_actions(self):
         if len(self.current_state.cached_actions) == 0:
             self.current_state.cached_actions = self.current_state.get_actions(self.get_current_color())
+            for i in range(len(self.current_state.cached_actions)):
+                print("actions are ", self.current_state.cached_actions[i])
         return self.current_state.cached_actions
 
     def get_current_color(self):
