@@ -1,10 +1,3 @@
-import sys
-import pdb
-pdb.set_trace()
-sys.path.append('../')
-sys.path.append('../dealers/simulators/pacmancode')
-
-
 from agents import *
 from agents.evaluations import *
 from dealers import *

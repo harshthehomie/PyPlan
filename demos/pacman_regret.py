@@ -1,13 +1,8 @@
-import sys
-sys.path.append('../')
-sys.path.append('../dealers/simulators/pacmancode')
-
-
 from agents import *
 from dealers import pacman_dealer
 
 """
-The UCB rollout agent attempts to minimize cumulative regret over its pull budget. Unlike uniform rollout, it doesn't
+The UCB rollout agent attempts to minimize cumulative regret over its pull budget. Unlike uniform rollout, it doesn't 
 spend much time on non-promising arms.
 """
 
