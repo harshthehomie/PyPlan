@@ -1,7 +1,7 @@
 import numpy as np
 from abstract import abstract_evaluation
 from agents import random_agent
-import pdb
+
 
 class RolloutEvaluation(abstract_evaluation.AbstractEvaluation):
     """Facilitates rollout according to a user-defined policy, width, and depth."""
@@ -24,7 +24,6 @@ class RolloutEvaluation(abstract_evaluation.AbstractEvaluation):
         """Simulate a rollout, returning the rewards accumulated."""
         rewards = np.array([0.0] * state.num_players)
         sim_state = state.clone()  # create the simulated state so that the current state is left unchanged
-        pdb.set_trace()
         for _ in range(self.depth):
             if sim_state.is_terminal():  # act and track rewards as long as possible
                 break
