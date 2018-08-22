@@ -4,7 +4,7 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-#
+# 
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -39,7 +39,6 @@ code to run a game.  This file is divided into three sections:
 To play your first game, type 'python pacman.py' from the command line.
 The keys are 'a', 's', 'd', and 'w' to move (or arrow keys).  Have fun!
 """
-
 from game import GameStateData
 from game import Game
 from game import Directions
@@ -71,6 +70,7 @@ class GameState:
     ####################################################
     # Accessor methods: use these to access state data #
     ####################################################
+
     # static variable keeps track of which states have had getLegalActions called
     explored = set()
     def getAndResetExplored():

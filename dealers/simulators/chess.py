@@ -4,7 +4,7 @@ import os
 import pygame
 from abstract import abstract_state
 from dealers.simulators.chesscode import chess
-import pdb
+
 
 class ChessState(abstract_state.AbstractState):
     env_name = "Chess"
@@ -35,9 +35,9 @@ class ChessState(abstract_state.AbstractState):
 
     def take_action(self, action):
         reward = self.current_state.move_piece(action)
-        pdb.set_trace()
+
         self.current_state.last_action, previous_player = action, self.current_player
-        self.update_current_player()                # Can be found in abstract_state.py
+        self.update_current_player()
 
         self.current_state.cached_actions = []
         self.get_actions()
@@ -53,8 +53,6 @@ class ChessState(abstract_state.AbstractState):
     def get_actions(self):
         if len(self.current_state.cached_actions) == 0:
             self.current_state.cached_actions = self.current_state.get_actions(self.get_current_color())
-            for i in range(len(self.current_state.cached_actions)):
-                print("actions are ", self.current_state.cached_actions[i])
         return self.current_state.cached_actions
 
     def get_current_color(self):
@@ -81,7 +79,7 @@ class ChessState(abstract_state.AbstractState):
 
             pygame.display.set_caption(self.env_name)
             if len(self.resources) == 0:
-                self.load_resources("/home/darkice/AI/packages/PyPlan/dealers/simulators/chesscode/sprites")
+                self.load_resources("..\\dealers\\simulators\\chesscode\\sprites")
             icon = pygame.transform.scale(self.resources['kwhite'], (32, 32))
             pygame.display.set_icon(icon)
 
